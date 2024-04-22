@@ -23,7 +23,8 @@ async def process_start_command(message: Message):
 @router.message(Command(commands='help'))
 async def process_help_command(message: Message):
     await message.answer(
-        replies['help']
+        replies['help'],
+        parse_mode=ParseMode.HTML
     )
 
 @router.message(Command(commands='add'))
